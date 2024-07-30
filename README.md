@@ -7,7 +7,7 @@ This project, originally an evaluation component for the Deep Learning course (2
 </p>
 
 <p align="center">
-  <i>Figure 1 - Some examples of spanish sentences, their correct english translations and the model's predicted translations</i>
+  <i>Figure 1 - Some examples of spanish sentences, their correct english translations and the model's predicted english equivalents</i>
 </p>
 
 The following document indicates how to access and utilise the source code. It also contains a brief analysis of the implementation and results.
