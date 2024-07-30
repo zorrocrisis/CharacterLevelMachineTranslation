@@ -42,7 +42,7 @@ The underlying dataset was provided before the project and is inside the *data* 
 The model's performance is displayed in Figure 1, having achieved a final validation error rate of 0.4847 and a final test error rate of 0.4906.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e632f733-2b80-4b28-97eb-a32c5e54b7ab"/>
+  <img height=500 src="https://github.com/user-attachments/assets/e632f733-2b80-4b28-97eb-a32c5e54b7ab"/>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ A **billinear attention mechanism was developed for the decoder**, which **weigh
 The model's performance is displayed in Figure 2, having achieved a final validation error rate of 0.3828 and a final test error rate of 0.3862, which represents a **clear improvement when compared to the previous version of the translator**.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8e6ffa23-44bd-4573-a69c-486d6f02bdcd"/>
+  <img height=500 src="https://github.com/user-attachments/assets/8e6ffa23-44bd-4573-a69c-486d6f02bdcd"/>
 </p>
 
 <p align="center">
