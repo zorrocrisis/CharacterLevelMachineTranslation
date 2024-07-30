@@ -1,9 +1,9 @@
 ## **Character Level Machine Translation**
 This project, originally an evaluation component for the Deep Learning course (2022/2023), talking place in Instituto Superior Técnico, University of Lisbon, aimed to explore the concept of **machine translation - the problem of automatically translating a sequence of tokens from a source language into a target language**. More specifically, this project contains a **character-level machine translation model from Spanish to English**.
 
-REPLACE
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/598e0554-0dff-4928-82bc-ea1ffdb41e92"/>
+  <img src="https://github.com/user-attachments/assets/55b0cf28-1746-401f-9650-157afdc5abb8"/>
 </p>
 
 <p align="center">
@@ -14,19 +14,18 @@ The following document indicates how to access and utilise the source code. It a
 
 ## **Quick Start**
 This project's source files can be downloaded from this repository. They are divided into the following main files:
-- ***hw2-q3*** - contains a Perceptron, a logistic regression and a multi-layer Perceptron classifiers, all grounded on "manual" implementations of differentiation.
+- ***hw2-q3*** - contains an encoder-decoder model with bidirectional LSTM and auto-regressive LSTM, with the option of utilising an billinear attention mechanism.
 
 To run this poject, follow these steps:
 1. Install the necessary dependencies:
      - pip install torch
-     - pip install scikit-learn
+     - pip install numpy
      - pip install matplotlib
-     - pip install torchvision
   
-2. Simply run whatever file you would like utilising a terminal. Bare in mind some models accept input parameters. Examples:
-     - python hw1-q1.py logistic_regression
-     - python hw1-q2.py ffn -layers 1 -hidden_sizes 200
-     - python hw1-q2.py -layers 2 -hidden_sizes 200 -learning_rate 0.1
+2. Simply run whatever file you would like utilising a terminal. Bare in mind the main file accepts input parameters. Examples:
+     - python hw2-q3.py
+     - python hw2-q3.py --use_attn
+     - python hw2-q3.py --use_attn --dropout 0.6 --n_epochs 60
   
 Feel free to change the test and training sets, as well as any other parameters you see fit.
 
@@ -39,27 +38,27 @@ The underlying dataset was provided before the project and is inside the *data* 
 - A hidden size of 128
 - A batch size of 64
 
-The model's performance is displayed in Figure 1, having achieved a final validation error rate of 0.4847 and a final test error rate of 0.4906.
+The model's performance is displayed in Figure 2, having achieved a final validation error rate of 0.4847 and a final test error rate of 0.4906.
 
 <p align="center">
   <img height=500 src="https://github.com/user-attachments/assets/e632f733-2b80-4b28-97eb-a32c5e54b7ab"/>
 </p>
 
 <p align="center">
-  <i>Figure 1 - Validation error rate over 50 epochs of Encoder-Decoder model with Bidirectional LSTM and Auto-regressive LSTM</i>
+  <i>Figure 2 - Validation error rate over 50 epochs of Encoder-Decoder model with Bidirectional LSTM and Auto-regressive LSTM</i>
 </p>
 
 ## **Advanced Implementation - With Attention Mechanism**
 A **billinear attention mechanism was developed for the decoder**, which **weighs the contribution of the different source characters**, according to relevance for the current prediction. The previously employed hyperparameters were once again utilised. This version of the model can be executed with the command *python hw2-q3.py –use_attn*.
 
-The model's performance is displayed in Figure 2, having achieved a final validation error rate of 0.3828 and a final test error rate of 0.3862, which represents a **clear improvement when compared to the previous version of the translator**.
+The model's performance is displayed in Figure 3, having achieved a final validation error rate of 0.3828 and a final test error rate of 0.3862, which represents a **clear improvement when compared to the previous version of the translator**.
 
 <p align="center">
   <img height=500 src="https://github.com/user-attachments/assets/8e6ffa23-44bd-4573-a69c-486d6f02bdcd"/>
 </p>
 
 <p align="center">
-  <i>Figure 2 - Validation error rate over 50 epochs of Encoder-Decoder model with Bidirectional LSTM and Auto-regressive LSTM</i>
+  <i>Figure 3 - Validation error rate over 50 epochs of Encoder-Decoder model with Bidirectional LSTM and Auto-regressive LSTM</i>
 </p>
 
 ## **Future Improvements**
